@@ -336,10 +336,12 @@
       </div>
     </form>
 
-    <span
-      id="loadingIndicator"
-      class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/ hidden loading loading-bars loading-lg"
-    ></span>
+    <dialog id="my_modal_2" class="modal">
+      <span
+        id="loadingIndicator"
+        class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/ hidden loading loading-bars loading-lg"
+      ></span>
+    </dialog>
 
     <!-- Open the modal using ID.showModal() method -->
     <dialog id="my_modal_1" class="modal">
@@ -363,10 +365,12 @@
 
           const loadingIndicator = document.getElementById("loadingIndicator");
           const modal = document.getElementById("my_modal_1");
+          const modal2 = document.getElementById("my_modal_2");
           const modalHeader = modal.querySelector(".modal-box h3");
           const modalParagraph = modal.querySelector(".modal-box p");
 
           try {
+            modal2.showModal();
             loadingIndicator.classList.remove("hidden");
 
             const url =
@@ -381,14 +385,16 @@
               },
               body: JSON.stringify(jsonData),
             });
-            const data = await response.json();
+            let data = await response.json();
 
             if (!response.ok) {
-              console.log("Form submission failed:", data);
+              data = await response;
+              console.log("Form submission failed:", response);
               modal.showModal();
               modalHeader.innerText = "Error";
-              modalParagraph.innerText = `${data.Status.ErrorMessage}. Please Check the fields and try again.`;
+              modalParagraph.innerText = `An unexpected error has occurred. Please Check the fields and try again.`;
               loadingIndicator.classList.add("hidden");
+              modal2.close();
               return;
             }
 
@@ -398,11 +404,13 @@
             modalParagraph.innerText =
               "Credit Report Received! Please check the contact note in HubSpot.";
             loadingIndicator.classList.add("hidden");
+            modal2.close();
           } catch (error) {
             modal.showModal();
             modalHeader.innerText = "Error";
             modalParagraph.innerText = error.message;
             loadingIndicator.classList.add("hidden");
+            modal2.close();
           }
         });
     </script>
