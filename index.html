@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./output.css" rel="stylesheet" />
+    <title>Credit File</title>
+  </head>
+  <body class="font-sans max-w-xl mx-auto p-5">
+    <h1 class="text-2xl font-bold mb-4 text-center">Credit File</h1>
+    <div role="tablist" class="tabs tabs-boxed" id="tabContainer">
+      <a role="tab" class="tab tab-active"> Illion </a>
+      <a role="tab" class="tab"> Equifax </a>
+    </div>
+    <form id="subscriptionForm" class="grid gap-4">
+      <div>
+        <label for="amount" class="block font-bold mb-1">Amount:</label>
+        <input
+          type="number"
+          id="amount"
+          name="amount"
+          required
+          class="w-full p-2 border rounded"
+        />
+      </div>
+
+      <div>
+        <label for="accountType" class="block font-bold mb-1"
+          >Account Type:</label
+        >
+        <select
+          id="accountType"
+          name="accountType"
+          required
+          class="w-full p-2 border rounded"
+        >
+          <option value="016">Real Estate Mortgage</option>
+          <option value="020">Telecommunications</option>
+          <option value="021">Terms</option>
+          <option value="011">Loan Contract</option>
+          <option value="024">Utilities</option>
+          <option value="013">Overdraft</option>
+          <option value="017">Rental or Equipment Hire</option>
+          <option value="027">Other</option>
+          <option value="022">Trade Finance</option>
+          <option value="008">Hire Purchase</option>
+          <option value="003">Cash on Delivery</option>
+          <option value="018">Revolving Credit</option>
+          <option value="001">Bill Of Sale</option>
+          <option value="009">Lease Agreement</option>
+          <option value="004">Dealership</option>
+          <option value="002">Bridging Finance</option>
+          <option value="005">Debit Card</option>
+          <option value="006">Director's Access</option>
+          <option value="007">Factored Account</option>
+          <option value="031">Hire Purchase and Revolving Credit</option>
+          <option value="010">Lending Proposal</option>
+          <option value="012">Mortgage Insurance</option>
+          <option value="026">Other Mortgage</option>
+          <option value="014">Premium Finance</option>
+          <option value="015">Professional Inquiry</option>
+          <option value="019">Search Request</option>
+          <option value="023">Transactional or Cheque Account</option>
+          <option value="025">Wholesale Finance</option>
+          <option value="N/A">Work Cover</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="creditObligation" class="block font-bold mb-1"
+          >Credit Obligation:</label
+        >
+        <select
+          id="creditObligation"
+          name="creditObligation"
+          required
+          class="w-full p-2 border rounded"
+        >
+          <option value="002">Director</option>
+          <option value="003">Guarantor</option>
+          <option value="004">Joint</option>
+          <option value="005">Principal</option>
+          <option value="006">Proprietor</option>
+        </select>
+      </div>
+
+      <fieldset class="border border-gray-300 p-4 mt-6 rounded">
+        <legend class="font-bold px-2">Personal Information</legend>
+        <div class="grid gap-4">
+          <div>
+            <label for="firstName" class="block font-bold mb-1"
+              >First Name:</label
+            >
+            <input
+              type="text"
+              id="firstName"
+              name="firstName"
+              required
+              class="w-full p-2 border rounded"
+            />
+          </div>
+          <div>
+            <label for="otherName" class="block font-bold mb-1"
+              >Other Name:</label
+            >
+            <input
+              type="text"
+              id="otherName"
+              name="otherName"
+              class="w-full p-2 border rounded"
+            />
+          </div>
+          <div>
+            <label for="surname" class="block font-bold mb-1">Surname:</label>
+            <input
+              type="text"
+              id="surname"
+              name="surname"
+              required
+              class="w-full p-2 border rounded"
+            />
+          </div>
+          <div>
+            <label for="dateOfBirth" class="block font-bold mb-1"
+              >Date of Birth:</label
+            >
+            <input
+              type="date"
+              id="dateOfBirth"
+              name="dateOfBirth"
+              required
+              class="w-full p-2 border rounded"
+            />
+          </div>
+          <div>
+            <label for="gender" class="block font-bold mb-1">Gender:</label>
+            <select
+              id="gender"
+              name="gender"
+              required
+              class="w-full p-2 border rounded"
+            >
+              <option value="">Select gender</option>
+              <option value="M">Male</option>
+              <option value="F">Female</option>
+              <option value="U">Unknown</option>
+            </select>
+          </div>
+          <div>
+            <label for="driversLicenceNumber" class="block font-bold mb-1"
+              >Driver's Licence Number:</label
+            >
+            <input
+              type="text"
+              id="driversLicenceNumber"
+              name="driversLicenceNumber"
+              class="w-full p-2 border rounded"
+            />
+          </div>
+        </div>
+
+        <fieldset class="border border-gray-300 p-4 mt-6 rounded">
+          <legend class="font-bold px-2">Address</legend>
+          <div class="grid gap-4">
+            <div>
+              <label for="unitNumber" class="block font-bold mb-1"
+                >Unit Number:</label
+              >
+              <input
+                type="text"
+                id="unitNumber"
+                name="unitNumber"
+                class="w-full p-2 border rounded"
+              />
+            </div>
+            <div>
+              <label for="streetNumber" class="block font-bold mb-1"
+                >Street Number:</label
+              >
+              <input
+                type="text"
+                id="streetNumber"
+                name="streetNumber"
+                required
+                class="w-full p-2 border rounded"
+              />
+            </div>
+            <div>
+              <label for="streetName" class="block font-bold mb-1"
+                >Street Name:</label
+              >
+              <input
+                type="text"
+                id="streetName"
+                name="streetName"
+                required
+                class="w-full p-2 border rounded"
+              />
+            </div>
+            <div>
+              <label for="streetType" class="block font-bold mb-1"
+                >Street Type:</label
+              >
+              <input
+                type="text"
+                id="streetType"
+                name="streetType"
+                required
+                class="w-full p-2 border rounded"
+              />
+            </div>
+            <div>
+              <label for="suburbTown" class="block font-bold mb-1"
+                >Suburb/Town:</label
+              >
+              <input
+                type="text"
+                id="suburbTown"
+                name="suburbTown"
+                required
+                class="w-full p-2 border rounded"
+              />
+            </div>
+            <div>
+              <label for="state" class="block font-bold mb-1">State:</label>
+              <input
+                type="text"
+                id="state"
+                name="state"
+                required
+                class="w-full p-2 border rounded"
+              />
+            </div>
+            <div>
+              <label for="postcode" class="block font-bold mb-1"
+                >Postcode:</label
+              >
+              <input
+                type="text"
+                id="postcode"
+                name="postcode"
+                required
+                class="w-full p-2 border rounded"
+              />
+            </div>
+          </div>
+        </fieldset>
+      </fieldset>
+
+      <button
+        type="submit"
+        class="bg-green-500 text-white py-2 px-4 rounded hover:bg-green-600 transition duration-300"
+      >
+        Submit
+      </button>
+    </form>
+
+    <script>
+      document
+        .getElementById("subscriptionForm")
+        .addEventListener("submit", async function (event) {
+          event.preventDefault();
+
+          try {
+            const url =
+              "https://hook.eu2.make.com/24tcxwwwia5aflabtbpu0rs16bgaz9af";
+            const formData = new FormData(this);
+            const jsonData = Object.fromEntries(formData.entries());
+
+            const response = await fetch(url, {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify(jsonData),
+            });
+
+            if (!response.ok) {
+              throw new Error(`HTTP error! status: ${response.status}`);
+            }
+
+            const data = await response.json();
+            console.log("Form submitted successfully:", data);
+            alert("Form submitted successfully!");
+          } catch (error) {
+            console.error(
+              "There was a problem with the form submission:",
+              error
+            );
+            alert("There was an error submitting the form. Please try again.");
+          }
+        });
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const tabContainer = document.getElementById("tabContainer");
+        const tabs = tabContainer.querySelectorAll(".tab");
+
+        tabs.forEach((tab) => {
+          tab.addEventListener("click", function (event) {
+            // Remove 'tab-active' class from all tabs
+            tabs.forEach((t) => t.classList.remove("tab-active"));
+
+            // Add 'tab-active' class to the clicked tab
+            event.target.classList.add("tab-active");
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
